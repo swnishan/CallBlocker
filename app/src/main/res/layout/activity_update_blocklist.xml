@@ -1,0 +1,396 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/bootstrap_brand_primary"
+            android:theme="@style/AppTheme.AppBarOverlay"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin">
+
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left"
+            android:orientation="vertical">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <AutoCompleteTextView
+                    android:id="@+id/country_code_auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:autoText="true"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:inputType="number"
+                    android:text="94" />
+
+                <AutoCompleteTextView
+                    android:id="@+id/phone_auto"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:autoText="true"
+                    android:hint="Enter phone number here"
+                    android:inputType="number"
+                    android:text="" />
+
+                <Button
+                    android:id="@+id/btnShowContactList"
+                    android:layout_width="30sp"
+                    android:layout_height="30sp"
+                    android:background="@mipmap/ic_add_contact_no" />
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp">
+
+            </TableRow>
+
+        </TableLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvChangeCountryCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Change Country Code"
+                android:textColor="@color/bootstrap_brand_info"
+                android:textSize="16dp"
+                android:textStyle="" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:background="@color/bootstrap_brand_info"
+                android:textColor="@color/bootstrap_brand_info" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginTop="20sp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Begin Time"
+                android:textColor="@android:color/black"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:textColor="@color/bootstrap_brand_primary"
+                    android:id="@+id/tvDisplayStartTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Begin Time" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvChangeStartTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Change"
+                        android:textColor="@color/bootstrap_brand_info"
+                        android:textSize="16dp"
+                        android:textStyle="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:background="@color/bootstrap_brand_info"
+                        android:textColor="@color/bootstrap_brand_info" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="End Time"
+                    android:textColor="@android:color/black"
+                    android:textSize="20dp"
+                    android:textStyle="bold" />
+
+                <CheckBox
+                    android:id="@+id/checkBoxEndTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvDisplayEndTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:text="Begin Time" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20sp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvChangeEndTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="Change"
+                        android:textColor="@color/bootstrap_brand_info"
+                        android:textSize="16dp"
+                        android:textStyle="" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1sp"
+                        android:background="@color/bootstrap_brand_info"
+                        android:textColor="@color/bootstrap_brand_info" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--<com.beardedhen.androidbootstrap.BootstrapButton-->
+            <!--android:id="@+id/btnStartTime"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="Start Time"-->
+            <!--app:bootstrapBrand="info"-->
+            <!--app:bootstrapSize="lg"-->
+            <!--app:buttonMode="regular"-->
+            <!--app:roundedCorners="true"-->
+            <!--app:showOutline="true" />-->
+
+            <!--<com.beardedhen.androidbootstrap.BootstrapButton-->
+            <!--android:id="@+id/btnEndTime"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:text="End Time"-->
+            <!--app:bootstrapBrand="info"-->
+            <!--app:bootstrapSize="lg"-->
+            <!--app:buttonMode="regular"-->
+            <!--app:roundedCorners="true"-->
+            <!--app:showOutline="true" />-->
+
+        </LinearLayout>
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="10sp"-->
+        <!--android:layout_marginRight="10sp"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tvDisplayStartTime"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center_horizontal" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tvDisplayEndTime"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_weight="1"-->
+        <!--android:gravity="center_horizontal" />-->
+
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20sp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtRepeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repeat"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="20dp"
+                android:textStyle="bold" />
+
+            <CheckBox
+                android:id="@+id/checkBoxRepeat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/layDatePicker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.beardedhen.androidbootstrap.BootstrapButtonGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:clickable="true"
+                android:orientation="horizontal"
+                android:text="BootstrapButtonGroup"
+                app:bootstrapBrand="info"
+                app:bootstrapSize="md"
+                app:roundedCorners="true"
+                app:showOutline="true">
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/d1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onDaySelect"
+                    android:text="S" />
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/d2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onDaySelect"
+                    android:text="M" />
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/d3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onDaySelect"
+                    android:text="T" />
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/d4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onDaySelect"
+                    android:text="W" />
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/d5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onDaySelect"
+                    android:text="T" />
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/d6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onDaySelect"
+                    android:text="F" />
+
+                <com.beardedhen.androidbootstrap.BootstrapButton
+                    android:id="@+id/d7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="onDaySelect"
+                    android:text="S" />
+
+            </com.beardedhen.androidbootstrap.BootstrapButtonGroup>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="bottom"
+            android:orientation="horizontal"
+            android:padding="20dip">
+
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/cancel_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Cancel"
+                app:bootstrapBrand="warning"
+                app:bootstrapSize="lg"
+                app:buttonMode="regular"
+                app:roundedCorners="true"
+                app:showOutline="true" />
+
+            <com.beardedhen.androidbootstrap.BootstrapButton
+                android:id="@+id/update_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Update"
+                app:bootstrapBrand="success"
+                app:bootstrapSize="lg"
+                app:buttonMode="regular"
+                app:roundedCorners="true"
+                app:showOutline="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>
